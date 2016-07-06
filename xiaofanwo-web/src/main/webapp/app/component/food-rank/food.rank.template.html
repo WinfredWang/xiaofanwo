@@ -1,0 +1,13 @@
+
+<div class="food-rank" style="float: left">
+	<div class="title">
+		<h4>{{'南京'}}特色美食排行</h4>
+	</div>
+	<ul class="list-group">
+        <li class="list-group-item" ng-repeat="food in $ctrl.foods">
+            <em class="rank-num">{{$index}}</em>
+            <span class="badge" ng-if="food.isNew">新</span> 
+            {{food.name}}
+        </li>
+    </ul>
+</div>

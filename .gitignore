@@ -1,6 +1,20 @@
 /target
 /.settings
-/.classpath
 /.project
-
+/xiaofanwo-common/.settings
+/xiaofanwo-common/.project
+/xiaofanwo-common/.classpath
+/xiaofanwo-common/target
+/xiaofanwo-dao/.settings
+/xiaofanwo-dao/.project
+/xiaofanwo-dao/.classpath
+/xiaofanwo-dao/target
+/xiaofanwo-resource/.settings
+/xiaofanwo-resource/.project
+/xiaofanwo-resource/.classpath
+/xiaofanwo-resource/target
+/xiaofanwo-web/.settings
+/xiaofanwo-web/.project
+/xiaofanwo-web/.classpath
+/xiaofanwo-web/target
 

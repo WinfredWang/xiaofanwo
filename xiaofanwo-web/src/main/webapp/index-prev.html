@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="third-party/bootstrap.min.css" />
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="third-party/bootstrap.min.js"></script>
+<script src="third-party/angular.min.js"></script>
+<script src="xfw/js/xfw-index.js"></script>
+<script src="xfw/js/directive/directive.js"></script>
+</head>
+<body ng-app="xfw" ng-controller="indexController">
+	<div id="xfw-content">
+		<div ng-include="'xfw/fragment/header.html'"></div>
+		<div ng-include="'xfw/fragment/food-carousel.html'" style="border-bottom:1px solid #eee"></div>
+		<div ng-include="'xfw/fragment/container.html'"></div>
+	</div>
+	<div id="fragment">
+		<div ng-include="'xfw/fragment/login.html'"></div>
+		<div ng-include="'xfw/fragment/regist.html'"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="xfw">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="third-party/bootstrap.min.css" />
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script src="third-party/angular.min.js"></script>
+<script src="third-party/angular-route.min.js"></script>
+<script src="app/component/food-carousel/food.carousel.module.js"></script>
+<script src="app/component/food-carousel/food.carousel.component.js"></script>
+<script src="app/component/food-rank/food.rank.module.js"></script>
+<script src="app/component/food-rank/food.rank.component.js"></script>
+<script src="app/component/food-detail/food.detail.module.js"></script>
+<script src="app/component/food-detail/food.detail.component.js"></script>
+<script src="app/component/header/header.module.js"></script>
+<script src="app/component/header/header.component.js"></script>
+<script>
+var xfwApp = angular.module('xfw', ['ngRoute','header','foodCarousel','foodRank','foodDetail']);
+xfwApp.config(['$locationProvider' ,'$routeProvider',
+  function config($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
+    $routeProvider.
+    when('/index', {
+        templateUrl: 'app/index.html'
+      }).
+      when('/user/:type', {
+          templateUrl: 'app/regist.html',
+          controller: 'userController'
+      }).
+      otherwise('/index');
+  }
+]);
+
+xfwApp.controller('userController', function($scope, $routeParams) {
+    $scope.type = $routeParams.type;
+});
+
+</script>
+</head>
+<body>
+	<div ng-view></div>
+</body>
+</html>

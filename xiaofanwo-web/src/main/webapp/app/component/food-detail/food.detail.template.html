@@ -1,0 +1,16 @@
+
+<div class="food-detail container">
+	<div class="m-title">
+		<h1>
+			<em class="rank-num">{{$ctrl.food.rankNum}}</em>{{$ctrl.food.name}}
+		</h1>
+	</div>
+	<div class="m-img">
+		<img ng-src="{{$ctrl.food.imageUrl}}" width="680" height="320">
+	</div>
+	<div class="m-txt">
+		<p>
+		{{$ctrl.food.detail}}
+		</p>
+	</div>
+</div>
